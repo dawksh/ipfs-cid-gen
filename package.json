@@ -1,0 +1,21 @@
+{
+  "name": "ipfs-cid",
+  "version": "1.0.0",
+  "description": "Generate CID for given data without uploading it to IPFS",
+  "main": "dist/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "ipfs",
+    "cid"
+  ],
+  "author": "Daksh Kulshrestha",
+  "license": "MIT",
+  "devDependencies": {
+    "typescript": "^5.2.2"
+  },
+  "dependencies": {
+    "ipfs-unixfs-importer": "^15.2.1"
+  }
+}
