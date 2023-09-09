@@ -4,7 +4,7 @@
     "module": "CommonJS",
     "outDir": "./dist",
     "rootDir": "./src",
-    // Add other options as needed
+    "declaration": true
   },
   "include": [
     "src/**/*.ts"
