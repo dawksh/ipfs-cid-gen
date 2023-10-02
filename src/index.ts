@@ -1,5 +1,7 @@
 
 import { ImporterOptions, importer } from 'ipfs-unixfs-importer'
+import { MemoryBlockstore } from 'blockstore-core/memory'
+
 
 type Data = string | Buffer | Uint8Array
 
@@ -8,6 +10,8 @@ const main = async (data: Data, options?: ImporterOptions): Promise<string> => {
     if (typeof data === 'string') {
         data = new TextEncoder().encode(data)
     }
+
+    // const block = new MemoryBlockstore()
 
     const block = {
         get: async cid => { throw new Error(`unexpected block API get for ${cid}`) },
@@ -22,11 +26,6 @@ const main = async (data: Data, options?: ImporterOptions): Promise<string> => {
         }
     }
 }
-
-main("Hello World", {cidVersion: 1}).then(res => {
-  console.log(res)
-})
-
 export { main as generateCID }
 
 

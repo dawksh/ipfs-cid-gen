@@ -17,6 +17,7 @@
   },
   "type": "commonjs",
   "dependencies": {
+    "blockstore-core": "^4.3.4",
     "ipfs-unixfs-importer": "^15.2.1"
   }
 }
